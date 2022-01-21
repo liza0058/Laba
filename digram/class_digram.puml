@@ -1,0 +1,35 @@
+@startuml
+
+class Starfield {
+   -CanvasRenderingContext2D ctx
+   +constructor();
+   +pushingStar();
+   +draw();
+   +animate();
+   +run();
+   -ctx;
+   -canvas.Width;
+   -canvas.Height;
+   -numStar;
+   -pushingStar;
+}
+
+class Star {
+    +constructor();
+    +move();
+    +show();
+    -CanvasRenderingContext2D ctx;
+    -ctx;
+    -size;
+    -x;
+    -y;
+    -z;
+    -size;
+    -speed;
+    centerX;
+    centerY;
+}
+
+Star *-- Starfield
+
+@enduml
